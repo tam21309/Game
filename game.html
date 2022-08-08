@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Game Find the speed number </title>
+    <style>
+        .times input {
+            box-shadow:
+                -3px -3px 3px 0px rgb(255, 255, 255),
+                -3px 3px 3px 0px rgba(255, 255, 255, 0.993),
+                3px 3px 3px 0px rgb(255, 255, 255),
+                3px 4px 3px 0px rgb(255, 255, 255);
+
+            box-shadow:
+                -7px -7px -7px 0px rgb(253, 253, 253),
+                -3px -3px -3px 0px rgba(255, 255, 255, 0.993),
+                3px 3px 3px 0px rgb(255, 255, 255),
+                3px 3px 3px 0px rgb(255, 255, 255);
+        }
+        input#start {
+            width: 30px;
+        }
+
+        a {
+            margin: 0px 0px 0px 150px;
+            color: rgb(255, 255, 255);
+        }
+
+        table {
+            margin: 7px 0px 0px;
+            border-collapse: collapse;
+        }
+
+        /* button {
+            width: 41px;
+            height: 37px;
+        } */
+
+        button.custom-btn.btn-9 {
+            width: 79px;
+            height: 40px;
+        }
+
+        button {
+            width: 41px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #4dccc6;
+            background-image: linear-gradient(315deg, #6bf3ec 0%, #55f8ed 74%);
+            /* line-height: 42px; */
+            padding: 0;
+            border: none;
+        }
+
+        .times button {
+            background: rgb(247, 150, 192);
+            background: radial-gradient(circle, rgb(255, 156, 199) 0%, rgb(33, 222, 255) 100%);
+            line-height: 42px;
+            padding: 0;
+            border: none;
+
+        }
+
+        input#point {
+            width: 34px;
+        }
+
+        h1 {
+            margin: 6px 312px;
+            color: rgb(2, 253, 253)
+        }
+
+        fieldset {
+            width: 941px;
+            height: 422px;
+        }
+
+        fieldset {
+
+            /* background-color: rgb(251, 27, 7); */
+            margin: 43px 139px;
+            /* box-shadow:
+                -7px -10px 25px 0px rgb(255, 255, 255),
+                -4px 4px 5px 0px rgba(255, 255, 255, 0.993),
+                7px 7px 20px 0px rgb(255, 255, 255),
+                4px 4px 5px 0px rgb(255, 255, 255);
+            box-shadow:
+                -7px -7px -20px 0px rgb(255, 250, 250),
+                -4px -4px -5px 0px rgba(255, 255, 255, 0.993),
+                7px 7px 20px 0px rgb(255, 255, 255),
+                4px 4px 5px 0px rgb(255, 255, 255); */
+            /* background-color: #4dccc6;
+            background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+            line-height: 42px;
+            padding: 0; */
+            border: none;
+            background: rgb(251, 33, 117);
+            background: linear-gradient(0deg, rgba(251, 33, 117, 1) 0%, rgba(234, 76, 137, 1) 100%);
+            color: #fff;
+            overflow: hidden;
+
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #09fd09;
+            background-image: linear-gradient(315deg, #0effff 0%, #09daff 74%);
+            transition: all 0.3s ease;
+            /* background: transparent; */
+            box-shadow: 5px 5px 5px 0 rgb(3, 217, 255),
+                -5px -5px 5px 0 rgb(255, 251, 0),
+                inset -4px -4px 6px 0 rgba(3, 247, 255, 0.938),
+                inset 4px 4px 6px 0 rgb(0, 247, 255);
+        }
+
+        .times {
+            width: 940px;
+        }
+
+        /* fieldset {
+            background-image: url(/Lamwebhtml/assets/img/266604.jpg);
+            height: 400px;
+        } */
+
+        input#heghest\ point {
+            width: 34px;
+        }
+
+        input#heghestpoint {
+            width: 34px;
+        }
+
+        body {
+            /* background-image: url(/Lamwebhtml/assets/img/game.png); */
+            /* background-color: #1fd1f9;
+            background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); */
+            background-color: rgb(2, 1, 1);
+        }
+
+        .btn-9 {
+            border: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        /* .btn-9:after {
+            position: absolute;
+            content: " ";
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1fd1f9;
+            background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+            transition: all 0.3s ease;
+        } */
+
+        .btn-9:hover {
+                background-color: #099cfd;
+                background-image: linear-gradient(315deg, #19d5ff 0%, #a507f5 74%);
+                transition: all 0.3s ease;
+                /* background: transparent; */
+                box-shadow: 4px 4px 6px 0 rgb(3, 255, 255),
+                    -4px -4px 6px 0 rgb(1, 255, 234),
+                    inset -4px -4px 6px 0 rgba(3, 247, 255, 0.938),
+                    inset 4px 4px 6px 0 rgb(0, 247, 255);
+                color: rgb(255, 255, 255);
+        }
+
+        /* .btn-9:hover:after {
+            -webkit-transform: scale(2) rotate(180deg);
+            transform: scale(2) rotate(180deg);
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255, 255, 255, .5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+        } */
+        fieldset:hover {
+            background-color: #099cfd;
+            background-image: linear-gradient(315deg, #ff02f2fa 0%, #ce12fd 74%);
+            transition: all 0.3s ease;
+            box-shadow:
+                -7px -10px 25px 0px rgb(255, 255, 255),
+                -4px 4px 5px 0px rgba(255, 255, 255, 0.993),
+                7px 7px 20px 0px rgb(255, 255, 255),
+                4px 4px 5px 0px rgb(255, 255, 255);
+
+            box-shadow:
+                -3px -3px -10px 0px rgb(255, 250, 250),
+                -4px -4px -5px 0px rgba(255, 255, 255, 0.993),
+                3px 3px 20px 0px rgb(255, 255, 255),
+                4px 4px 5px 0px rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<fieldset>
+
+    <body>
+
+        <div class="times">
+            <h1>Find the speed number</h1>
+            <button class="custom-btn btn-9" onclick="start()">Start</button>
+            <a>Point: </a>
+            <input type="text" id="point" value="0" disabled>
+            <a>Highest point:</a>
+            <input type="text" id="heghestpoint" value="0" disabled>
+            <a>Times: </a>
+            <input type="text" id="start" value="500" disabled>
+        </div>
+        <div id="game">
+
+        </div>
+    </body>
+    <script>
+
+        function heghestpoint() {
+            let max = localStorage.getItem("point");
+            document.getElementById('heghestpoint').value = max
+            console.log(max)
+        }
+        heghestpoint()
+
+
+        function clearbutton() {
+
+        }
+
+        let nextnumber = 1
+        let point = 0;
+
+        function click_button(ts_number) {
+
+            console.log('click thành công')
+            if (nextnumber == ts_number) {
+                document.getElementById('button' + ts_number).style.opacity = 0
+
+                nextnumber++
+                point++
+            } else {
+                alert('Bạn đã chọn sai Điểm của bạn là: ' + point);
+                localStorage.setItem("point", point);
+                restart()
+            }
+
+            document.getElementById('point').value = point
+            console.log(point)
+        }
+
+
+        var getValue = function () {
+            var time = document.getElementById('start').value;
+            time--;
+            document.getElementById('start').value = time;
+            if (time == 0 && point < 100) {
+                alert("GameOver" + ' Điểm của bạn là: ' + point)
+                localStorage.setItem("point", point);
+                restart()
+            } else if (point >= 100 && time > 0) {
+                localStorage.setItem("point", point);
+                alert(' You Won')
+                restart()
+            }
+        }
+        function start() {
+            setInterval(getValue, 1000)
+            show();
+
+        }
+
+        function restart() {
+            return location.reload()
+        }
+
+        function shuffle(array) {
+            let currentIndex = array.length, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (currentIndex != 0) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+        var numberarr = []
+        function show() {
+            for (a = 0; a <= 139; a++) {
+                numberarr[a] = a + 1
+            }
+            numberarr = shuffle(numberarr)
+            var index = 0
+            let table = '<table border="0" cellpacing=0 cellpadding=3> ';
+            for (let i = 1; i <= 7; i++) {
+                table += '<tr>';
+                var arr = []
+                arr.push(i)
+                for (j = 1; j <= 20; j++) {
+                    table = table + '<td>' + '<button id="button' + numberarr[index] + '" onclick="click_button(' + numberarr[index] + ')">' + (numberarr[index]) + '</button></td>';
+                    index++;
+                }
+
+            }
+
+            table += '</tr>';
+            table += '</table>';
+            document.getElementById('game').innerHTML = table
+            //document.write(table);
+
+        }
+        
+        
+    </script>
+
+</html>
